@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jadwal Pelajaran SMK Diponegoro 1 Purwokerto Tahun Pelajaran 2026/2027">
+  <title>Jadwal Pelajaran — SMK Diponegoro 1 Purwokerto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Beranda">
+        <span class="brand-mark">D1</span>
+        <span>
+          <strong>SMK DIPONEGORO 1</strong>
+          <small>PURWOKERTO · JADWAL PELAJARAN</small>
+        </span>
+      </a>
+      <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="mainNav">Menu</button>
+      <nav id="mainNav" class="main-nav">
+        <a href="#jadwal">Jadwal</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#guru">Guru</a>
+        <a href="#sumber">Sumber Data</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">TAHUN PELAJARAN 2026 / 2027</p>
+          <h1>Jadwal pelajaran,<br><em>lebih mudah dicari.</em></h1>
+          <p class="hero-copy">
+            Temukan jadwal berdasarkan hari, jam, mata pelajaran, kelas, atau guru.
+            Dirancang sederhana, cepat, dan nyaman digunakan dari ponsel maupun komputer.
+          </p>
+          <a class="button button-dark" href="#jadwal">Lihat jadwal <span>↓</span></a>
+        </div>
+        <div class="hero-note">
+          <span class="hero-number">01</span>
+          <p>Portal jadwal digital<br>SMK Diponegoro 1 Purwokerto</p>
+          <div class="rule"></div>
+          <p class="muted">Data awal diambil dari dokumen jadwal tahun pelajaran 2026/2027.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="jadwal" class="schedule-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / JADWAL</p>
+            <h2>Cari jadwal</h2>
+          </div>
+          <p id="resultCount" class="result-count">Memuat data…</p>
+        </div>
+
+        <div class="search-panel">
+          <div class="search-main">
+            <label for="searchInput">Pencarian</label>
+            <div class="search-box">
+              <span aria-hidden="true">⌕</span>
+              <input id="searchInput" type="search"
+                     placeholder="Cari mata pelajaran, guru, kelas, atau jam…"
+                     autocomplete="off">
+              <button id="clearSearch" class="clear-button" type="button" title="Hapus pencarian">×</button>
+            </div>
+          </div>
+
+          <div class="filters">
+            <label>
+              Hari
+              <select id="dayFilter">
+                <option value="">Semua hari</option>
+              </select>
+            </label>
+            <label>
+              Kelas
+              <select id="classFilter">
+                <option value="">Semua kelas</option>
+              </select>
+            </label>
+            <label>
+              Guru
+              <select id="teacherFilter">
+                <option value="">Semua guru</option>
+              </select>
+            </label>
+            <label>
+              Jam
+              <select id="timeFilter">
+                <option value="">Semua jam</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="search-footer">
+            <button id="resetFilters" class="button button-light" type="button">Reset semua filter</button>
+            <p>Tip: ketik sebagian kata, misalnya <strong>Matematika</strong>, <strong>DKV</strong>, atau nama guru.</p>
+          </div>
+        </div>
+
+        <div id="activeFilters" class="active-filters" aria-live="polite"></div>
+
+        <div class="table-wrap">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Hari</th>
+                <th>Waktu</th>
+                <th>Jam</th>
+                <th>Kelas</th>
+                <th>Mata Pelajaran</th>
+                <th>Guru</th>
+              </tr>
+            </thead>
+            <tbody id="scheduleBody"></tbody>
+          </table>
+        </div>
+
+        <div id="emptyState" class="empty-state" hidden>
+          <div class="empty-icon">∅</div>
+          <h3>Jadwal tidak ditemukan</h3>
+          <p>Coba ubah kata pencarian atau gunakan filter yang lebih umum.</p>
+        </div>
+
+        <div class="pagination" id="pagination" aria-label="Navigasi halaman"></div>
+      </div>
+    </section>
+
+    <section id="tentang" class="about-section">
+      <div class="container two-column">
+        <div>
+          <p class="eyebrow">02 / TENTANG</p>
+          <h2>Satu tempat untuk menemukan jadwal sekolah.</h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            Website ini merupakan tampilan digital dari jadwal pelajaran SMK Diponegoro 1
+            Purwokerto. Antarmukanya dibuat dengan pendekatan editorial yang bersih:
+            tipografi tegas, ruang putih, navigasi sederhana, dan informasi yang mudah dipindai.
+          </p>
+          <p>
+            Versi awal ini berjalan sepenuhnya di browser menggunakan HTML, CSS, dan JavaScript.
+            Belum membutuhkan database atau server sehingga cocok sebagai fondasi sebelum
+            dikembangkan ke GitHub Pages, Supabase, atau sistem admin.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="guru" class="directory-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 / DIREKTORI GURU</p>
+            <h2>Kode guru</h2>
+          </div>
+          <p class="muted">Kode mengikuti dokumen jadwal sumber.</p>
+        </div>
+        <div id="teacherDirectory" class="teacher-grid"></div>
+      </div>
+    </section>
+
+    <section id="sumber" class="source-section">
+      <div class="container source-box">
+        <div>
+          <p class="eyebrow">04 / SUMBER DATA</p>
+          <h2>Jadwal 2026/2027</h2>
+          <p>
+            Data awal ditransformasikan dari file Excel jadwal yang diberikan untuk proyek ini.
+            Jika jadwal sekolah berubah, data JavaScript dapat diperbarui tanpa mengubah desain halaman.
+          </p>
+        </div>
+        <div class="source-meta">
+          <span>Format</span><strong>HTML · CSS · JS</strong>
+          <span>Data</span><strong>339 entri jadwal</strong>
+          <span>Kelas</span><strong>9 rombel</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 SMK Diponegoro 1 Purwokerto</p>
+      <p>Jadwal Pelajaran · Versi awal</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
